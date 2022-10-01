@@ -44,7 +44,7 @@
             this.label_StaffID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.txt_StaffPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,6 +90,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(214, 120);
             this.dataGridView1.Name = "dataGridView1";
@@ -105,6 +106,7 @@
             this.label_BackToLogin.Size = new System.Drawing.Size(133, 26);
             this.label_BackToLogin.TabIndex = 24;
             this.label_BackToLogin.Text = "Back To Login";
+            this.label_BackToLogin.Click += new System.EventHandler(this.label_BackToLogin_Click);
             // 
             // label3
             // 
@@ -199,12 +201,12 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Password";
             // 
-            // txt_Password
+            // txt_StaffPassword
             // 
-            this.txt_Password.Location = new System.Drawing.Point(23, 342);
-            this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(155, 20);
-            this.txt_Password.TabIndex = 31;
+            this.txt_StaffPassword.Location = new System.Drawing.Point(23, 342);
+            this.txt_StaffPassword.Name = "txt_StaffPassword";
+            this.txt_StaffPassword.Size = new System.Drawing.Size(155, 20);
+            this.txt_StaffPassword.TabIndex = 31;
             // 
             // Form_StaffInfo
             // 
@@ -212,7 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 470);
-            this.Controls.Add(this.txt_Password);
+            this.Controls.Add(this.txt_StaffPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_Search);
             this.Controls.Add(this.label_Delete);
@@ -256,6 +258,6 @@
         private System.Windows.Forms.Label label_StaffID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.TextBox txt_StaffPassword;
     }
 }

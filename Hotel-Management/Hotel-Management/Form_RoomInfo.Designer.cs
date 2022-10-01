@@ -87,6 +87,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(214, 120);
             this.dataGridView1.Name = "dataGridView1";
@@ -102,6 +103,7 @@
             this.label_BackToLogin.Size = new System.Drawing.Size(133, 26);
             this.label_BackToLogin.TabIndex = 24;
             this.label_BackToLogin.Text = "Back To Login";
+            this.label_BackToLogin.Click += new System.EventHandler(this.label_BackToLogin_Click);
             // 
             // txt_RoomPhoneNumber
             // 

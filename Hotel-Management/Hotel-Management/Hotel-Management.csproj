@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,11 +65,34 @@
     <Compile Include="Form_ClientInfo.Designer.cs">
       <DependentUpon>Form_ClientInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ReceptionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ReceptionInfo.Designer.cs">
+      <DependentUpon>Form_ReceptionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ReservationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ReservationInfo.Designer.cs">
+      <DependentUpon>Form_ReservationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RoomInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RoomInfo.Designer.cs">
+      <DependentUpon>Form_RoomInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_StaffInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_StaffInfo.Designer.cs">
       <DependentUpon>Form_StaffInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HotelDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +104,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ClientInfo.resx">
       <DependentUpon>Form_ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ReceptionInfo.resx">
+      <DependentUpon>Form_ReceptionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ReservationInfo.resx">
+      <DependentUpon>Form_ReservationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RoomInfo.resx">
+      <DependentUpon>Form_RoomInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_StaffInfo.resx">
       <DependentUpon>Form_StaffInfo.cs</DependentUpon>
@@ -93,6 +126,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="HotelDataSet.xsc">
+      <DependentUpon>HotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HotelDataSet.xss">
+      <DependentUpon>HotelDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

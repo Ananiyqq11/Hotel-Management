@@ -145,9 +145,11 @@
             this.label_BackToLogin.Size = new System.Drawing.Size(133, 26);
             this.label_BackToLogin.TabIndex = 9;
             this.label_BackToLogin.Text = "Back To Login";
+            this.label_BackToLogin.Click += new System.EventHandler(this.label_BackToLogin_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(219, 133);
             this.dataGridView1.Name = "dataGridView1";

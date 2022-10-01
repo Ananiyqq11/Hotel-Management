@@ -1,0 +1,17 @@
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\bin\Debug\Hotel-Management.exe.config
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\bin\Debug\Hotel-Management.exe
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\bin\Debug\Hotel-Management.pdb
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel-Management.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel-Management.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_Login.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_AdminPage.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_ClientInfo.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_ReservationInfo.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_RoomInfo.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_StaffInfo.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel-Management.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel-Management.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel-Management.exe
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel-Management.pdb
+C:\Users\user\Documents\GitHub\Hotel-Management\Hotel-Management\Hotel-Management\obj\Debug\Hotel_Management.Form_ReceptionInfo.resources

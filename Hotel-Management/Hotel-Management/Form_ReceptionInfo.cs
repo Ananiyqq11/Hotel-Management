@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Hotel_Management
 {
-    public partial class Form_StaffInfo : Form
+    public partial class Form_ReceptionInfo : Form
     {
-        public Form_StaffInfo()
+        public Form_ReceptionInfo()
         {
             InitializeComponent();
             populate();
@@ -24,7 +24,7 @@ namespace Hotel_Management
         public void populate()
         {
             con.Open();
-            string query = "select * from Staff";
+            string query = "select * from Reception";
             SqlDataAdapter adapter = new SqlDataAdapter(query, con);
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             var ds = new DataSet();
@@ -33,12 +33,11 @@ namespace Hotel_Management
             con.Close();
 
         }
-
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
             Form_Login login = new Form_Login();
             login.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

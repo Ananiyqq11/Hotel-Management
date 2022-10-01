@@ -35,6 +35,7 @@
             this.label_Reservation = new System.Windows.Forms.Label();
             this.label_X = new System.Windows.Forms.Label();
             this.label_Backtologin = new System.Windows.Forms.Label();
+            this.label_Reception = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,6 +60,7 @@
             this.label_Client.Size = new System.Drawing.Size(95, 37);
             this.label_Client.TabIndex = 1;
             this.label_Client.Text = "Client";
+            this.label_Client.Click += new System.EventHandler(this.label_Client_Click);
             // 
             // label_Room
             // 
@@ -70,6 +72,7 @@
             this.label_Room.Size = new System.Drawing.Size(90, 37);
             this.label_Room.TabIndex = 2;
             this.label_Room.Text = "Room";
+            this.label_Room.Click += new System.EventHandler(this.label_Room_Click);
             // 
             // label_Staff
             // 
@@ -81,6 +84,7 @@
             this.label_Staff.Size = new System.Drawing.Size(75, 37);
             this.label_Staff.TabIndex = 3;
             this.label_Staff.Text = "Staff";
+            this.label_Staff.Click += new System.EventHandler(this.label_Staff_Click);
             // 
             // label_Reservation
             // 
@@ -92,6 +96,7 @@
             this.label_Reservation.Size = new System.Drawing.Size(165, 37);
             this.label_Reservation.TabIndex = 4;
             this.label_Reservation.Text = "Reservation";
+            this.label_Reservation.Click += new System.EventHandler(this.label_Reservation_Click);
             // 
             // label_X
             // 
@@ -103,6 +108,7 @@
             this.label_X.Size = new System.Drawing.Size(41, 36);
             this.label_X.TabIndex = 5;
             this.label_X.Text = "X";
+            this.label_X.Click += new System.EventHandler(this.label_X_Click);
             // 
             // label_Backtologin
             // 
@@ -115,12 +121,25 @@
             this.label_Backtologin.TabIndex = 6;
             this.label_Backtologin.Text = "Back To Login";
             // 
+            // label_Reception
+            // 
+            this.label_Reception.AutoSize = true;
+            this.label_Reception.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Reception.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_Reception.Location = new System.Drawing.Point(298, 205);
+            this.label_Reception.Name = "label_Reception";
+            this.label_Reception.Size = new System.Drawing.Size(144, 37);
+            this.label_Reception.TabIndex = 7;
+            this.label_Reception.Text = "Reception";
+            this.label_Reception.Click += new System.EventHandler(this.label_Reception_Click);
+            // 
             // Form_AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(800, 442);
+            this.Controls.Add(this.label_Reception);
             this.Controls.Add(this.label_Backtologin);
             this.Controls.Add(this.label_X);
             this.Controls.Add(this.label_Reservation);
@@ -145,5 +164,6 @@
         private System.Windows.Forms.Label label_Reservation;
         private System.Windows.Forms.Label label_X;
         private System.Windows.Forms.Label label_Backtologin;
+        private System.Windows.Forms.Label label_Reception;
     }
 }
