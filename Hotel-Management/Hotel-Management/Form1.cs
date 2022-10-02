@@ -32,7 +32,7 @@ namespace Hotel_Management
             }
             else if (txt_username.Text == "reception" && txt_password.Text == "reception")
             {
-                Form_ReservationInfo reception = new Form_ReservationInfo();
+                Form_ReceptionInfo reception = new Form_ReceptionInfo();
                 reception.Show();
                 this.Hide();
             }

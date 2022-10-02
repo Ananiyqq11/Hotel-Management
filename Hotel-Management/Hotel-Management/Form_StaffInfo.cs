@@ -40,5 +40,23 @@ namespace Hotel_Management
             login.Show();
             this.Close();
         }
+
+        private void label_Add_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand Command = new SqlCommand("insert into Staff values(@StaffID,@StaffName,@StaffPhone,@StaffGender,@StaffPassword)", con);
+            Command.Parameters.AddWithValue("@StaffID", txt_StaffID.Text);
+            Command.Parameters.AddWithValue("@StaffName",txt_StaffName.Text);
+            Command.Parameters.AddWithValue("@StaffPhone",txt_StaffPhoneNumber.Text);
+            Command.Parameters.AddWithValue("@StaffGender", comboBox1.SelectedItem.ToString());
+            Command.Parameters.AddWithValue("@StaffPassword", txt_StaffPassword.Text);
+
+
+            Command.ExecuteNonQuery();
+            MessageBox.Show("Staff Added Successfully!!!");
+            con.Close();
+            populate();
+        }
     }
 }

@@ -87,6 +87,7 @@
             this.label_Add.Size = new System.Drawing.Size(49, 26);
             this.label_Add.TabIndex = 26;
             this.label_Add.Text = "Add";
+            this.label_Add.Click += new System.EventHandler(this.label_Add_Click);
             // 
             // dataGridView1
             // 

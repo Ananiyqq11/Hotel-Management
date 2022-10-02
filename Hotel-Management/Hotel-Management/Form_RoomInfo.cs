@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Hotel_Management
 {
@@ -40,6 +41,22 @@ namespace Hotel_Management
             Form_Login login = new Form_Login();
             login.Show();
             this.Hide();
+        }
+
+        private void label_Add_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand Command = new SqlCommand("insert into Room values(@RoomID,@RoomPhone,@RoomAvailable)", con);
+            Command.Parameters.AddWithValue("@RoomID",txt_RoomNumber.Text);
+            Command.Parameters.AddWithValue("@RoomPhone",txt_RoomPhoneNumber.Text.ToString());
+            Command.Parameters.AddWithValue("@RoomAvailable",(radioButton_Yes.Checked)?"Free":"Rented");
+       
+
+            Command.ExecuteNonQuery();
+            MessageBox.Show("Room Added Successfully!!!");
+            con.Close();
+            populate();
         }
     }
 }

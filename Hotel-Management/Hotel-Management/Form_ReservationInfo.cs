@@ -18,6 +18,8 @@ namespace Hotel_Management
         {
             InitializeComponent();
             populate();
+            fillClientcombo();
+            fillRoomcombo();    
         }
         static readonly string constring = ConfigurationManager.ConnectionStrings["Hotel_Management.Properties.Settings.HotelConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(constring);
@@ -33,12 +35,52 @@ namespace Hotel_Management
             con.Close();
 
         }
-
+        public void fillClientcombo()
+        {
+            con.Open();
+            SqlCommand command = new SqlCommand("select ClientName from Client", con);
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ClientName",typeof(string));
+            dt.Load(reader);
+            comboBox1.ValueMember = "ClientName";
+            comboBox1.DataSource = dt;     
+            con.Close();
+        }
+        public void fillRoomcombo()
+        {
+            con.Open();
+            SqlCommand command = new SqlCommand("select RoomID from Room", con);
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("RoomID", typeof(int));
+            dt.Load(reader);
+            comboBox2.ValueMember = "RoomID";
+            comboBox2.DataSource = dt;
+            con.Close();
+        }
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
             Form_Login login = new Form_Login();
             login.Show();
             this.Hide();
+        }
+
+        private void label_Add_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand Command = new SqlCommand("insert into Reservation values(@ClientName,@RoomID,@DateIn,@DateOut)", con);
+            Command.Parameters.AddWithValue("@ClientName",comboBox1.Text.ToString());
+            Command.Parameters.AddWithValue("@RoomID",comboBox2.Text.ToString());
+            Command.Parameters.AddWithValue("@DateIn",dateTimePicker1.Text.ToString());
+            Command.Parameters.AddWithValue("@DateOut",dateTimePicker2.Text.ToString());
+
+
+            Command.ExecuteNonQuery();
+            MessageBox.Show("Reservation Done Successfully!!!");
+            con.Close();
+            populate();
         }
     }
 }

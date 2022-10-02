@@ -39,5 +39,25 @@ namespace Hotel_Management
             login.Show();
             this.Hide();
         }
+
+        private void label_Add_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand Command = new SqlCommand("insert into Reception values(@ReceptID,@ReceptName,@ReceptPhone,@ReceptGender,@ReceptAddress,@ReceptDob,@ReceptPassword)", con);
+            Command.Parameters.AddWithValue("@ReceptID", txt_ReceptionID.Text);
+            Command.Parameters.AddWithValue("@ReceptName", txt_ReceptionName.Text);
+            Command.Parameters.AddWithValue("@ReceptPhone", txt_ReceptionPhoneNumber.Text);
+            Command.Parameters.AddWithValue("@ReceptGender", comboBox1.SelectedItem.ToString());
+            Command.Parameters.AddWithValue("@ReceptAddress",txt_ReceptionAddress.Text);
+            Command.Parameters.AddWithValue("@ReceptDob", txt_ReceptionDoB.Text);
+            Command.Parameters.AddWithValue("@ReceptPassword",txt_ReceptionPassword.Text);
+
+
+            Command.ExecuteNonQuery();
+            MessageBox.Show("Reception Added Successfully!!!");
+            con.Close();
+            populate();
+        }
     }
 }

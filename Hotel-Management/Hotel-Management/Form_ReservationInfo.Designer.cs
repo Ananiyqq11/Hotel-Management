@@ -35,10 +35,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label_BackToLogin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_ReservationID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label_ClientName = new System.Windows.Forms.Label();
-            this.label_ReservationID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -87,6 +85,7 @@
             this.label_Add.Size = new System.Drawing.Size(49, 26);
             this.label_Add.TabIndex = 26;
             this.label_Add.Text = "Add";
+            this.label_Add.Click += new System.EventHandler(this.label_Add_Click);
             // 
             // dataGridView1
             // 
@@ -118,18 +117,11 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Date In";
             // 
-            // txt_ReservationID
-            // 
-            this.txt_ReservationID.Location = new System.Drawing.Point(23, 148);
-            this.txt_ReservationID.Name = "txt_ReservationID";
-            this.txt_ReservationID.Size = new System.Drawing.Size(155, 20);
-            this.txt_ReservationID.TabIndex = 19;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 250);
+            this.label2.Location = new System.Drawing.Point(12, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 26);
             this.label2.TabIndex = 18;
@@ -139,21 +131,11 @@
             // 
             this.label_ClientName.AutoSize = true;
             this.label_ClientName.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ClientName.Location = new System.Drawing.Point(18, 178);
+            this.label_ClientName.Location = new System.Drawing.Point(12, 93);
             this.label_ClientName.Name = "label_ClientName";
             this.label_ClientName.Size = new System.Drawing.Size(116, 26);
             this.label_ClientName.TabIndex = 17;
             this.label_ClientName.Text = "Client Name";
-            // 
-            // label_ReservationID
-            // 
-            this.label_ReservationID.AutoSize = true;
-            this.label_ReservationID.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ReservationID.Location = new System.Drawing.Point(18, 104);
-            this.label_ReservationID.Name = "label_ReservationID";
-            this.label_ReservationID.Size = new System.Drawing.Size(136, 26);
-            this.label_ReservationID.TabIndex = 16;
-            this.label_ReservationID.Text = "Reservation ID";
             // 
             // label1
             // 
@@ -194,7 +176,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 216);
+            this.comboBox1.Location = new System.Drawing.Point(17, 145);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 21);
             this.comboBox1.TabIndex = 33;
@@ -202,7 +184,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(23, 290);
+            this.comboBox2.Location = new System.Drawing.Point(17, 250);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(155, 21);
             this.comboBox2.TabIndex = 34;
@@ -225,10 +207,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label_BackToLogin);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_ReservationID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label_ClientName);
-            this.Controls.Add(this.label_ReservationID);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ReservationInfo";
@@ -248,10 +228,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label_BackToLogin;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_ReservationID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_ClientName;
-        private System.Windows.Forms.Label label_ReservationID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
