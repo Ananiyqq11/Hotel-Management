@@ -50,7 +50,7 @@ namespace Hotel_Management
         public void fillRoomcombo()
         {
             con.Open();
-            SqlCommand command = new SqlCommand("select RoomID from Room", con);
+            SqlCommand command = new SqlCommand("select RoomID from Room where RoomAvailable = 'Free' ", con);
             SqlDataReader reader = command.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Columns.Add("RoomID", typeof(int));
