@@ -58,5 +58,18 @@ namespace Hotel_Management
             con.Close();
             populate();
         }
+
+        private void label_Delete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand Command = new SqlCommand("delete from Room where @RoomID=RoomID", con);
+            Command.Parameters.AddWithValue("@RoomID", txt_RoomNumber.Text);
+
+            Command.ExecuteNonQuery();
+            MessageBox.Show("Room Deleted Successfully!!!");
+            con.Close();
+            populate();
+        }
     }
 }

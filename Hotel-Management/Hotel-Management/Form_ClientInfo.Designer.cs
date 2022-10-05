@@ -186,6 +186,7 @@
             this.label_Delete.Size = new System.Drawing.Size(65, 26);
             this.label_Delete.TabIndex = 13;
             this.label_Delete.Text = "Delete";
+            this.label_Delete.Click += new System.EventHandler(this.label_Delete_Click);
             // 
             // label_Search
             // 
