@@ -120,6 +120,7 @@
             this.label_Backtologin.Size = new System.Drawing.Size(198, 37);
             this.label_Backtologin.TabIndex = 6;
             this.label_Backtologin.Text = "Back To Login";
+            this.label_Backtologin.Click += new System.EventHandler(this.label_Backtologin_Click);
             // 
             // label_Reception
             // 

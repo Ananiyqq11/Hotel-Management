@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.txt_password = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.errorProviderforuserinput = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderforuserinput)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -109,6 +112,11 @@
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // errorProviderforuserinput
+            // 
+            this.errorProviderforuserinput.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderforuserinput.ContainerControl = this;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +133,7 @@
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login page";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderforuserinput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +148,7 @@
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.ErrorProvider errorProviderforuserinput;
     }
 }
 

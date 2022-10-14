@@ -22,8 +22,27 @@ namespace Hotel_Management
             Application.Exit();
         }
 
+        private bool validateinput()
+        {
+            bool valid = true;
+            if (txt_username.Text.Equals(string.Empty))
+            {
+                valid = false;
+                txt_username.Focus();
+                errorProviderforuserinput.SetError(txt_username, "Invalid ENTRY, Please Enter username");
+            }
+            if (txt_password.Text.Equals(string.Empty))
+            {
+                valid = false;
+                txt_password.Focus();
+                errorProviderforuserinput.SetError(txt_password, "Invalid ENTRY, Please Enter password");
+            }
+            return valid;
+        }
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            validateinput();
             if (txt_username.Text == "admin" && txt_password.Text == "admin")
             {
                 Form_AdminPage admin = new Form_AdminPage();

@@ -56,5 +56,12 @@ namespace Hotel_Management
             reception.Show();
             this.Hide();
         }
+
+        private void label_Backtologin_Click(object sender, EventArgs e)
+        {
+            Form_Login a = new Form_Login();
+            a.Show();
+            this.Hide();
+        }
     }
 }
