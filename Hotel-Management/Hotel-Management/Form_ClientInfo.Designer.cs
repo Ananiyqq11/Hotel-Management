@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label_ClientID = new System.Windows.Forms.Label();
             this.label_ClientName = new System.Windows.Forms.Label();
@@ -44,7 +45,9 @@
             this.label_Delete = new System.Windows.Forms.Label();
             this.label_Search = new System.Windows.Forms.Label();
             this.label_Exit = new System.Windows.Forms.Label();
+            this.errorProviderforclient = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderforclient)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -211,6 +214,11 @@
             this.label_Exit.Text = "X";
             this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
             // 
+            // errorProviderforclient
+            // 
+            this.errorProviderforclient.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderforclient.ContainerControl = this;
+            // 
             // Form_ClientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +245,7 @@
             this.Name = "Form_ClientInfo";
             this.Text = "Form_ClientInfo";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderforclient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +269,6 @@
         private System.Windows.Forms.Label label_Delete;
         private System.Windows.Forms.Label label_Search;
         private System.Windows.Forms.Label label_Exit;
+        private System.Windows.Forms.ErrorProvider errorProviderforclient;
     }
 }
