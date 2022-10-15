@@ -1,0 +1,9 @@
+Group Members
+  .Amanuel Esayase
+  .Ayub Nuru
+  .Fikir Mekasha
+  .Ananiya H/meskel
+Hospital Management System
+  implemented by C#(front end)
+             and SQL database(back end)
+  
