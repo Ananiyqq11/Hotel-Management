@@ -43,6 +43,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label_Exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,9 +103,9 @@
             this.label_BackToLogin.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_BackToLogin.Location = new System.Drawing.Point(428, 402);
             this.label_BackToLogin.Name = "label_BackToLogin";
-            this.label_BackToLogin.Size = new System.Drawing.Size(133, 26);
+            this.label_BackToLogin.Size = new System.Drawing.Size(134, 26);
             this.label_BackToLogin.TabIndex = 24;
-            this.label_BackToLogin.Text = "Back To Login";
+            this.label_BackToLogin.Text = "Back To Menu";
             this.label_BackToLogin.Click += new System.EventHandler(this.label_BackToLogin_Click);
             // 
             // label3
@@ -189,12 +190,24 @@
             this.comboBox2.Size = new System.Drawing.Size(155, 21);
             this.comboBox2.TabIndex = 34;
             // 
+            // label_Exit
+            // 
+            this.label_Exit.AutoSize = true;
+            this.label_Exit.Font = new System.Drawing.Font("Ravie", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Exit.Location = new System.Drawing.Point(762, -2);
+            this.label_Exit.Name = "label_Exit";
+            this.label_Exit.Size = new System.Drawing.Size(38, 36);
+            this.label_Exit.TabIndex = 35;
+            this.label_Exit.Text = "x";
+            this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
+            // 
             // Form_ReservationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker2);
@@ -236,5 +249,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label_Exit;
     }
 }

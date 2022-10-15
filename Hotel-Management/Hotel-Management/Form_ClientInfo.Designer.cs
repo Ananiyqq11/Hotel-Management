@@ -43,6 +43,7 @@
             this.label_Edit = new System.Windows.Forms.Label();
             this.label_Delete = new System.Windows.Forms.Label();
             this.label_Search = new System.Windows.Forms.Label();
+            this.label_Exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +126,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 26);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // label3
             // 
@@ -142,9 +144,9 @@
             this.label_BackToLogin.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_BackToLogin.Location = new System.Drawing.Point(433, 415);
             this.label_BackToLogin.Name = "label_BackToLogin";
-            this.label_BackToLogin.Size = new System.Drawing.Size(133, 26);
+            this.label_BackToLogin.Size = new System.Drawing.Size(134, 26);
             this.label_BackToLogin.TabIndex = 9;
-            this.label_BackToLogin.Text = "Back To Login";
+            this.label_BackToLogin.Text = "Back To Menu";
             this.label_BackToLogin.Click += new System.EventHandler(this.label_BackToLogin_Click);
             // 
             // dataGridView1
@@ -198,12 +200,24 @@
             this.label_Search.TabIndex = 14;
             this.label_Search.Text = "Search";
             // 
+            // label_Exit
+            // 
+            this.label_Exit.AutoSize = true;
+            this.label_Exit.Font = new System.Drawing.Font("Ravie", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Exit.Location = new System.Drawing.Point(760, 0);
+            this.label_Exit.Name = "label_Exit";
+            this.label_Exit.Size = new System.Drawing.Size(41, 36);
+            this.label_Exit.TabIndex = 15;
+            this.label_Exit.Text = "X";
+            this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
+            // 
             // Form_ClientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.label_Search);
             this.Controls.Add(this.label_Delete);
             this.Controls.Add(this.label_Edit);
@@ -245,5 +259,6 @@
         private System.Windows.Forms.Label label_Edit;
         private System.Windows.Forms.Label label_Delete;
         private System.Windows.Forms.Label label_Search;
+        private System.Windows.Forms.Label label_Exit;
     }
 }

@@ -45,19 +45,19 @@ namespace Hotel_Management
             validateinput();
             if (txt_username.Text == "admin" && txt_password.Text == "admin")
             {
-                Form_AdminPage admin = new Form_AdminPage();
+                Form_AdminPage admin = new Form_AdminPage("admin");
                 admin.Show();
                 this.Hide();
             }
             else if (txt_username.Text == "reception" && txt_password.Text == "reception")
             {
-                Form_ReceptionInfo reception = new Form_ReceptionInfo();
+                Form_ReceptionInfo reception = new Form_ReceptionInfo("reception");
                 reception.Show();
                 this.Hide();
             }
             else if (txt_username.Text == "staff" && txt_password.Text == "staff")
             {
-                Form_StaffInfo staff = new Form_StaffInfo();
+                Form_StaffInfo staff = new Form_StaffInfo("staff");
                 staff.Show();
                 this.Hide();
             }

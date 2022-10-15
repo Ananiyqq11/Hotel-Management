@@ -32,9 +32,57 @@ namespace Hotel_Management
             con.Close();
             
         }
+        public void demo()
+        {
+/*Ethiopia
+Kenya
+Ghana
+Egypt
+Israel
+China
+United States
+Canada
+United Kingdom*/
+            if (comboBox1.SelectedItem.ToString().Equals("Ethiopia"))
+            {
+                txt_ClientPhoneNumber.Text = "+251";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("Kenya"))
+            {
+                txt_ClientPhoneNumber.Text = "+254";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("Ghana"))
+            {
+                txt_ClientPhoneNumber.Text = "+233";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("Egypt"))
+            {
+                txt_ClientPhoneNumber.Text = "+20";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("Israel"))
+            {
+                txt_ClientPhoneNumber.Text = "+972";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("China"))
+            {
+                txt_ClientPhoneNumber.Text = "+86";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("United States"))
+            {
+                txt_ClientPhoneNumber.Text = "+1";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("Canada"))
+            {
+                txt_ClientPhoneNumber.Text = "+1";
+            }
+            if (comboBox1.SelectedItem.ToString().Equals("United Kingdom"))
+            {
+                txt_ClientPhoneNumber.Text = "+44";
+            }
+        }
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
-            Form_Login login = new Form_Login();
+            Form_AdminPage login = new Form_AdminPage("admin");
             login.Show();
             this.Hide();
         }
@@ -66,6 +114,16 @@ namespace Hotel_Management
             MessageBox.Show("Client Deleted Successfully!!!");
             con.Close();
             populate();
+        }
+
+        private void label_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            demo();
         }
     }
 }

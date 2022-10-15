@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_StaffPassword = new System.Windows.Forms.TextBox();
+            this.label_Exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,9 +106,9 @@
             this.label_BackToLogin.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_BackToLogin.Location = new System.Drawing.Point(423, 435);
             this.label_BackToLogin.Name = "label_BackToLogin";
-            this.label_BackToLogin.Size = new System.Drawing.Size(133, 26);
+            this.label_BackToLogin.Size = new System.Drawing.Size(134, 26);
             this.label_BackToLogin.TabIndex = 24;
-            this.label_BackToLogin.Text = "Back To Login";
+            this.label_BackToLogin.Text = "Back To Menu";
             this.label_BackToLogin.Click += new System.EventHandler(this.label_BackToLogin_Click);
             // 
             // label3
@@ -210,12 +211,24 @@
             this.txt_StaffPassword.Size = new System.Drawing.Size(155, 20);
             this.txt_StaffPassword.TabIndex = 31;
             // 
+            // label_Exit
+            // 
+            this.label_Exit.AutoSize = true;
+            this.label_Exit.Font = new System.Drawing.Font("Ravie", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Exit.Location = new System.Drawing.Point(762, -1);
+            this.label_Exit.Name = "label_Exit";
+            this.label_Exit.Size = new System.Drawing.Size(38, 36);
+            this.label_Exit.TabIndex = 32;
+            this.label_Exit.Text = "x";
+            this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
+            // 
             // Form_StaffInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.txt_StaffPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_Search);
@@ -261,5 +274,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_StaffPassword;
+        private System.Windows.Forms.Label label_Exit;
     }
 }

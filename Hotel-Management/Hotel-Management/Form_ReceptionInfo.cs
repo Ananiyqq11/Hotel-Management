@@ -14,10 +14,16 @@ namespace Hotel_Management
 {
     public partial class Form_ReceptionInfo : Form
     {
-        public Form_ReceptionInfo()
+        public Form_ReceptionInfo(string user)
         {
-            InitializeComponent();
-            populate();
+            {
+                InitializeComponent();
+                if (user != "admin")
+                {
+                    label_BackToLogin.Hide();
+                }
+                populate();
+            }
         }
         static readonly string constring = ConfigurationManager.ConnectionStrings["Hotel_Management.Properties.Settings.HotelConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(constring);
@@ -35,7 +41,7 @@ namespace Hotel_Management
         }
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
-            Form_Login login = new Form_Login();
+            Form_AdminPage login = new Form_AdminPage("admin");
             login.Show();
             this.Hide();
         }
@@ -71,6 +77,11 @@ namespace Hotel_Management
             MessageBox.Show("Reception Deleted Successfully!!!");
             con.Close();
             populate();
+        }
+
+        private void label_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

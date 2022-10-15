@@ -14,9 +14,13 @@ namespace Hotel_Management
 {
     public partial class Form_StaffInfo : Form
     {
-        public Form_StaffInfo()
+        public Form_StaffInfo(string user)
         {
             InitializeComponent();
+            if(user != "admin")
+            {
+                label_BackToLogin.Hide();
+            }
             populate();
         }
         static readonly string constring = ConfigurationManager.ConnectionStrings["Hotel_Management.Properties.Settings.HotelConnectionString"].ConnectionString;
@@ -36,7 +40,7 @@ namespace Hotel_Management
 
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
-            Form_Login login = new Form_Login();
+            Form_AdminPage login = new Form_AdminPage("admin");
             login.Show();
             this.Close();
         }
@@ -70,6 +74,11 @@ namespace Hotel_Management
             MessageBox.Show("Staff Deleted Successfully!!!");
             con.Close();
             populate();
+        }
+
+        private void label_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

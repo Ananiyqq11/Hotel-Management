@@ -12,9 +12,13 @@ namespace Hotel_Management
 {
     public partial class Form_AdminPage : Form
     {
-        public Form_AdminPage()
+        public Form_AdminPage(string user)
         {
             InitializeComponent();
+            if (user != "admin")
+            {
+                label_Backtologin.Hide();
+            }
         }
 
         private void label_X_Click(object sender, EventArgs e)
@@ -31,7 +35,7 @@ namespace Hotel_Management
 
         private void label_Staff_Click(object sender, EventArgs e)
         {
-            Form_StaffInfo staff = new Form_StaffInfo();
+            Form_StaffInfo staff = new Form_StaffInfo("admin");
             staff.Show();
             this.Hide();
         }
@@ -52,7 +56,7 @@ namespace Hotel_Management
 
         private void label_Reception_Click(object sender, EventArgs e)
         {
-            Form_ReceptionInfo reception = new Form_ReceptionInfo();
+            Form_ReceptionInfo reception = new Form_ReceptionInfo("admin");
             reception.Show();
             this.Hide();
         }

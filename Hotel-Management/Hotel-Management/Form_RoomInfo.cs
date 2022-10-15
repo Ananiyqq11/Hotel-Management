@@ -38,7 +38,7 @@ namespace Hotel_Management
 
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
-            Form_Login login = new Form_Login();
+            Form_AdminPage login = new Form_AdminPage("admin");
             login.Show();
             this.Hide();
         }
@@ -70,6 +70,11 @@ namespace Hotel_Management
             MessageBox.Show("Room Deleted Successfully!!!");
             con.Close();
             populate();
+        }
+
+        private void label_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
