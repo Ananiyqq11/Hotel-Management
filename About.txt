@@ -3,7 +3,7 @@ Group Members
   .Ayub Nuru
   .Fikir Mekasha
   .Ananiya H/meskel
-Hospital Management System
+Hotel Management System
   implemented by C#(front end)
              and SQL database(back end)
   
