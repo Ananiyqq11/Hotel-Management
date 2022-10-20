@@ -50,13 +50,12 @@ namespace Hotel_Management
         {
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            SqlCommand Command = new SqlCommand("insert into Reception values(@ReceptID,@ReceptName,@ReceptPhone,@ReceptGender,@ReceptAddress,@ReceptDob,@ReceptPassword)", con);
+            SqlCommand Command = new SqlCommand("insert into Reception values(@ReceptID,@ReceptName,@ReceptPhone,@ReceptGender,@ReceptAddress,@ReceptPassword)", con);
             Command.Parameters.AddWithValue("@ReceptID", txt_ReceptionID.Text);
             Command.Parameters.AddWithValue("@ReceptName", txt_ReceptionName.Text);
             Command.Parameters.AddWithValue("@ReceptPhone", txt_ReceptionPhoneNumber.Text);
             Command.Parameters.AddWithValue("@ReceptGender", comboBox1.SelectedItem.ToString());
             Command.Parameters.AddWithValue("@ReceptAddress",txt_ReceptionAddress.Text);
-            Command.Parameters.AddWithValue("@ReceptDob", txt_ReceptionDoB.Text);
             Command.Parameters.AddWithValue("@ReceptPassword",txt_ReceptionPassword.Text);
 
 

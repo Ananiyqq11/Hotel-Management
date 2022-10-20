@@ -32,7 +32,7 @@ namespace Hotel_Management
             adapter.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             con.Close();
-            
+           
         }
         private bool validateinput()
         {

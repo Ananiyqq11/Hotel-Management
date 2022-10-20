@@ -46,16 +46,14 @@
             this.label_ReceptionID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_ReceptionAddress = new System.Windows.Forms.TextBox();
-            this.txt_ReceptionDoB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label_Exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_ReceptionPassword
             // 
-            this.txt_ReceptionPassword.Location = new System.Drawing.Point(10, 383);
+            this.txt_ReceptionPassword.Location = new System.Drawing.Point(174, 322);
             this.txt_ReceptionPassword.Name = "txt_ReceptionPassword";
             this.txt_ReceptionPassword.Size = new System.Drawing.Size(155, 20);
             this.txt_ReceptionPassword.TabIndex = 48;
@@ -64,7 +62,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 322);
+            this.label4.Location = new System.Drawing.Point(5, 316);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 26);
             this.label4.TabIndex = 47;
@@ -74,7 +72,7 @@
             // 
             this.label_Search.AutoSize = true;
             this.label_Search.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Search.Location = new System.Drawing.Point(549, 349);
+            this.label_Search.Location = new System.Drawing.Point(634, 346);
             this.label_Search.Name = "label_Search";
             this.label_Search.Size = new System.Drawing.Size(66, 26);
             this.label_Search.TabIndex = 46;
@@ -84,7 +82,7 @@
             // 
             this.label_Delete.AutoSize = true;
             this.label_Delete.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Delete.Location = new System.Drawing.Point(667, 346);
+            this.label_Delete.Location = new System.Drawing.Point(793, 346);
             this.label_Delete.Name = "label_Delete";
             this.label_Delete.Size = new System.Drawing.Size(65, 26);
             this.label_Delete.TabIndex = 45;
@@ -95,7 +93,7 @@
             // 
             this.label_Edit.AutoSize = true;
             this.label_Edit.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Edit.Location = new System.Drawing.Point(462, 349);
+            this.label_Edit.Location = new System.Drawing.Point(511, 346);
             this.label_Edit.Name = "label_Edit";
             this.label_Edit.Size = new System.Drawing.Size(46, 26);
             this.label_Edit.TabIndex = 44;
@@ -105,7 +103,7 @@
             // 
             this.label_Add.AutoSize = true;
             this.label_Add.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Add.Location = new System.Drawing.Point(343, 349);
+            this.label_Add.Location = new System.Drawing.Point(374, 346);
             this.label_Add.Name = "label_Add";
             this.label_Add.Size = new System.Drawing.Size(49, 26);
             this.label_Add.TabIndex = 43;
@@ -125,7 +123,7 @@
             // 
             this.label_BackToLogin.AutoSize = true;
             this.label_BackToLogin.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_BackToLogin.Location = new System.Drawing.Point(423, 419);
+            this.label_BackToLogin.Location = new System.Drawing.Point(537, 415);
             this.label_BackToLogin.Name = "label_BackToLogin";
             this.label_BackToLogin.Size = new System.Drawing.Size(134, 26);
             this.label_BackToLogin.TabIndex = 41;
@@ -136,7 +134,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(199, 322);
+            this.label3.Location = new System.Drawing.Point(5, 264);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 26);
             this.label3.TabIndex = 40;
@@ -149,7 +147,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(174, 377);
+            this.comboBox1.Location = new System.Drawing.Point(174, 267);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 26);
             this.comboBox1.TabIndex = 39;
@@ -217,37 +215,20 @@
             // 
             // txt_ReceptionAddress
             // 
-            this.txt_ReceptionAddress.Location = new System.Drawing.Point(174, 270);
+            this.txt_ReceptionAddress.Location = new System.Drawing.Point(174, 225);
             this.txt_ReceptionAddress.Name = "txt_ReceptionAddress";
             this.txt_ReceptionAddress.Size = new System.Drawing.Size(155, 20);
             this.txt_ReceptionAddress.TabIndex = 52;
-            // 
-            // txt_ReceptionDoB
-            // 
-            this.txt_ReceptionDoB.Location = new System.Drawing.Point(174, 223);
-            this.txt_ReceptionDoB.Name = "txt_ReceptionDoB";
-            this.txt_ReceptionDoB.Size = new System.Drawing.Size(155, 20);
-            this.txt_ReceptionDoB.TabIndex = 51;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 270);
+            this.label2.Location = new System.Drawing.Point(5, 219);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 26);
             this.label2.TabIndex = 50;
             this.label2.Text = "Reception Address";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(141, 26);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Reception DOB";
             // 
             // label_Exit
             // 
@@ -268,9 +249,7 @@
             this.ClientSize = new System.Drawing.Size(1002, 450);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.txt_ReceptionAddress);
-            this.Controls.Add(this.txt_ReceptionDoB);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_ReceptionPassword);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_Search);
@@ -317,9 +296,7 @@
         private System.Windows.Forms.Label label_ReceptionID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_ReceptionAddress;
-        private System.Windows.Forms.TextBox txt_ReceptionDoB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label_Exit;
     }
 }
