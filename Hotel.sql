@@ -112,7 +112,6 @@ ReceptName nvarchar(50) not null,
 ReceptPhone nvarchar(50) not null,
 ReceptGender nvarchar(50) not null,
 ReceptAddress nvarchar(50) not null,
-ReceptDob nvarchar(50) not null,
 ReceptPassword nvarchar(50) not null
 )
 go
@@ -122,14 +121,13 @@ create procedure [insert into Reception]
 @receptphone nvarchar(15),
 @receptgender nvarchar(25),
 @receptaddress nvarchar(50),
-@receptdob nvarchar(50),--might not be neccessary
 @receptpassword nvarchar(50)
 as
 begin
 insert into Reception
-(ReceptID,ReceptName,ReceptPhone,ReceptGender,ReceptAddress,ReceptDob,ReceptPassword) 
+(ReceptID,ReceptName,ReceptPhone,ReceptGender,ReceptAddress,ReceptPassword) 
 values
-(@recepttid,@receptname,@receptphone,@receptgender,@receptaddress,@receptdob,@receptpassword)
+(@recepttid,@receptname,@receptphone,@receptgender,@receptaddress,@receptpassword)
 end
 
 go
@@ -142,8 +140,8 @@ ReceptID=@receptid
 end
 
 insert into Reception values
-(1,'reception member','2321021','Female','Los Angeles','2000-3-2','pass123')
-exec [insert into Reception] 123,'demo','911','Female','qwait','2002-7-8','my123'
+(1,'reception member','2321021','Female','Los Angeles','pass123')
+exec [insert into Reception] 123,'demo','911','Female','qwait','my123'
 exec [delete Reception] 123
 select * from Reception
 
@@ -184,3 +182,14 @@ insert into Reservation values
 select * from Reservation
 exec [insert into Reservation] 'Third',101,'2022-10-14','2022-10-18'
 exec [delete Reservation] 101
+
+ go
+ create trigger [After Reservation]
+ on Reservation 
+ after insert
+ as
+ begin
+ declare @roomid int
+ select @roomid = RoomID from inserted
+ update Room set RoomAvailable='Rented' where RoomID=@roomid 
+ end
