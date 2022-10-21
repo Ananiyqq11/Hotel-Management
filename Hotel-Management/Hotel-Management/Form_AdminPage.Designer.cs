@@ -36,6 +36,8 @@
             this.label_X = new System.Windows.Forms.Label();
             this.label_Backtologin = new System.Windows.Forms.Label();
             this.label_Reception = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(272, 39);
+            this.label1.Location = new System.Drawing.Point(586, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 39);
             this.label1.TabIndex = 0;
@@ -134,12 +136,38 @@
             this.label_Reception.Text = "Reception";
             this.label_Reception.Click += new System.EventHandler(this.label_Reception_Click);
             // 
+            // label2
+            // 
+            this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label2.Location = new System.Drawing.Point(251, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(175, 39);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Main Menu";
+            // 
+            // label3
+            // 
+            this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label3.Location = new System.Drawing.Point(373, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 39);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Logged In As :";
+            // 
             // Form_AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(800, 442);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label_Reception);
             this.Controls.Add(this.label_Backtologin);
             this.Controls.Add(this.label_X);
@@ -166,5 +194,7 @@
         private System.Windows.Forms.Label label_X;
         private System.Windows.Forms.Label label_Backtologin;
         private System.Windows.Forms.Label label_Reception;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

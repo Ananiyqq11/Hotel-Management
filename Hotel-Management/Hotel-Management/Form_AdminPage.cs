@@ -15,9 +15,16 @@ namespace Hotel_Management
         public Form_AdminPage(string user)
         {
             InitializeComponent();
-            if (user != "admin")
+            label1.Text = user;
+            if (user.Equals("Staff"))
             {
-                label_Backtologin.Hide();
+                label_Reception.Hide();
+                label_Reservation.Hide();
+            }
+            if (user.Equals("Reception"))
+            {   
+                label_Staff.Hide();
+                label_Room.Hide();
             }
         }
 
@@ -28,35 +35,35 @@ namespace Hotel_Management
 
         private void label_Client_Click(object sender, EventArgs e)
         {
-            Form_ClientInfo client = new Form_ClientInfo();
+            Form_ClientInfo client = new Form_ClientInfo(label1.Text);
             client.Show();
             this.Hide();
         }
 
         private void label_Staff_Click(object sender, EventArgs e)
         {
-            Form_StaffInfo staff = new Form_StaffInfo("admin");
+            Form_StaffInfo staff = new Form_StaffInfo(label1.Text);
             staff.Show();
             this.Hide();
         }
 
         private void label_Room_Click(object sender, EventArgs e)
         {
-            Form_RoomInfo room = new Form_RoomInfo();
+            Form_RoomInfo room = new Form_RoomInfo(label1.Text);
             room.Show();
             this.Hide();
         }
 
         private void label_Reservation_Click(object sender, EventArgs e)
         {
-            Form_ReservationInfo reservation = new Form_ReservationInfo();
+            Form_ReservationInfo reservation = new Form_ReservationInfo(label1.Text);
             reservation.Show();
             this.Hide();
         }
 
         private void label_Reception_Click(object sender, EventArgs e)
         {
-            Form_ReceptionInfo reception = new Form_ReceptionInfo("admin");
+            Form_ReceptionInfo reception = new Form_ReceptionInfo(label1.Text);
             reception.Show();
             this.Hide();
         }

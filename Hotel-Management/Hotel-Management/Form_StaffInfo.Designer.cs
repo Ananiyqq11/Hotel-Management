@@ -46,6 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_StaffPassword = new System.Windows.Forms.TextBox();
             this.label_Exit = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +190,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 22);
+            this.label1.Location = new System.Drawing.Point(534, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 39);
             this.label1.TabIndex = 15;
@@ -222,12 +224,34 @@
             this.label_Exit.Text = "x";
             this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(270, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(249, 39);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Staff Information";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(332, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(207, 39);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Logged In As :";
+            // 
             // Form_StaffInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(800, 470);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.txt_StaffPassword);
             this.Controls.Add(this.label4);
@@ -275,5 +299,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_StaffPassword;
         private System.Windows.Forms.Label label_Exit;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

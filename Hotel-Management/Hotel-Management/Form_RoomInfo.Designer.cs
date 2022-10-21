@@ -43,6 +43,8 @@
             this.radioButton_Yes = new System.Windows.Forms.RadioButton();
             this.radioButton_No = new System.Windows.Forms.RadioButton();
             this.label_Exit = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +103,7 @@
             // 
             this.label_BackToLogin.AutoSize = true;
             this.label_BackToLogin.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_BackToLogin.Location = new System.Drawing.Point(428, 402);
+            this.label_BackToLogin.Location = new System.Drawing.Point(423, 415);
             this.label_BackToLogin.Name = "label_BackToLogin";
             this.label_BackToLogin.Size = new System.Drawing.Size(134, 26);
             this.label_BackToLogin.TabIndex = 24;
@@ -156,7 +158,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 22);
+            this.label1.Location = new System.Drawing.Point(518, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(265, 39);
             this.label1.TabIndex = 15;
@@ -197,12 +199,34 @@
             this.label_Exit.Text = "x";
             this.label_Exit.Click += new System.EventHandler(this.label_Exit_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(266, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 39);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Room Information";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(314, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(207, 39);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Logged In As :";
+            // 
             // Form_RoomInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.radioButton_No);
             this.Controls.Add(this.radioButton_Yes);
@@ -244,5 +268,7 @@
         private System.Windows.Forms.RadioButton radioButton_Yes;
         private System.Windows.Forms.RadioButton radioButton_No;
         private System.Windows.Forms.Label label_Exit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

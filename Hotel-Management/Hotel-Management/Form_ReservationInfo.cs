@@ -14,12 +14,14 @@ namespace Hotel_Management
 {
     public partial class Form_ReservationInfo : Form
     {
-        public Form_ReservationInfo()
+        public Form_ReservationInfo(string user)
         {
             InitializeComponent();
             populate();
             fillClientcombo();
-            fillRoomcombo();    
+            fillRoomcombo();
+            label1.Text = user;
+            
         }
         static readonly string constring = ConfigurationManager.ConnectionStrings["Hotel_Management.Properties.Settings.HotelConnectionString"].ConnectionString;
         SqlConnection con = new SqlConnection(constring);
@@ -61,7 +63,7 @@ namespace Hotel_Management
         }
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
-            Form_AdminPage login = new Form_AdminPage("admin");
+            Form_AdminPage login = new Form_AdminPage(label1.Text);
             login.Show();
             this.Hide();
         }

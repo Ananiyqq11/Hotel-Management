@@ -18,11 +18,9 @@ namespace Hotel_Management
         {
             {
                 InitializeComponent();
-                if (user != "admin")
-                {
-                    label_BackToLogin.Hide();
-                }
                 populate();
+                label1.Text = user;
+
             }
         }
         static readonly string constring = ConfigurationManager.ConnectionStrings["Hotel_Management.Properties.Settings.HotelConnectionString"].ConnectionString;
@@ -41,7 +39,8 @@ namespace Hotel_Management
         }
         private void label_BackToLogin_Click(object sender, EventArgs e)
         {
-            Form_AdminPage login = new Form_AdminPage("admin");
+
+            Form_AdminPage login = new Form_AdminPage(label1.Text);
             login.Show();
             this.Hide();
         }

@@ -46,6 +46,8 @@
             this.label_Search = new System.Windows.Forms.Label();
             this.label_Exit = new System.Windows.Forms.Label();
             this.errorProviderforclient = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderforclient)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 35);
+            this.label1.Location = new System.Drawing.Point(509, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(268, 39);
             this.label1.TabIndex = 0;
@@ -219,12 +221,34 @@
             this.errorProviderforclient.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderforclient.ContainerControl = this;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(260, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(268, 39);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Client Information";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(306, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 39);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Logged In As :";
+            // 
             // Form_ClientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label_Exit);
             this.Controls.Add(this.label_Search);
             this.Controls.Add(this.label_Delete);
@@ -270,5 +294,7 @@
         private System.Windows.Forms.Label label_Search;
         private System.Windows.Forms.Label label_Exit;
         private System.Windows.Forms.ErrorProvider errorProviderforclient;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

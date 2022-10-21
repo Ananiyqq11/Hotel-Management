@@ -49,19 +49,19 @@ namespace Hotel_Management
 
             if (txt_username.Text == "admin" && txt_password.Text == "admin")
             {
-                Form_AdminPage admin = new Form_AdminPage("admin");
+                Form_AdminPage admin = new Form_AdminPage("Admin");
                 admin.Show();
                 this.Hide();
             }
             else if (txt_username.Text == "reception" && txt_password.Text == "reception")
             {
-                Form_ReceptionInfo reception = new Form_ReceptionInfo("reception");
+                Form_AdminPage reception = new Form_AdminPage("Reception");
                 reception.Show();
                 this.Hide();
             }
             else if (txt_username.Text == "staff" && txt_password.Text == "staff")
             {
-                Form_StaffInfo staff = new Form_StaffInfo("staff");
+                Form_AdminPage staff = new Form_AdminPage("Staff");
                 staff.Show();
                 this.Hide();
             }
