@@ -22,6 +22,17 @@ values
 (@clientid,@clientname,@clientphone,@clientcountry)
 end
 go
+create procedure [update Client]
+@clientid int,
+@clientname nvarchar(50),
+@clientphone nvarchar(15),
+@clientcountry nvarchar(25)
+as
+begin
+update Client set
+ClientID=@clientid,ClientName=@clientname,ClientPhone=@clientphone,ClientCountry=@clientcountry
+end
+go
 create procedure [delete Client]
 @clientid int
 as
@@ -29,7 +40,12 @@ begin
 delete Client where 
 ClientID=@clientid
 end
-
+go
+create procedure [Client Date]
+as
+begin
+select GETDATE()
+end
 insert into Client values 
 (1,'The First Customer','0987654321','Ethiopia')
 exec [insert into Client] 10,'Storeddemo','098765','Ethiopia'
@@ -193,3 +209,16 @@ exec [delete Reservation] 101
  select @roomid = RoomID from inserted
  update Room set RoomAvailable='Rented' where RoomID=@roomid 
  end
+  go
+ create trigger [After Reservation Deleted]
+ on Reservation 
+ after delete
+ as
+ begin
+ declare @roomid int
+ select @roomid = RoomID from deleted
+ update Room set RoomAvailable='Free' where RoomID=@roomid 
+ end
+alter table Reservation disable trigger [After Reservation Deleted] 
+
+
