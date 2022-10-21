@@ -89,5 +89,18 @@ namespace Hotel_Management
         {
             Application.Exit();
         }
+
+        private void label_Delete_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand Command = new SqlCommand("delete from Reservation where @RoomID=RoomID", con);
+            Command.Parameters.AddWithValue("@RoomID", comboBox2.Text.ToString());
+
+            Command.ExecuteNonQuery();
+            MessageBox.Show("Reservation Deleted Successfully!!!");
+            con.Close();
+            populate();
+        }
     }
 }

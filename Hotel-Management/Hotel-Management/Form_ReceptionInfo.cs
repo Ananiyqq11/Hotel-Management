@@ -81,5 +81,10 @@ namespace Hotel_Management
         {
             Application.Exit();
         }
+
+        private void label_Search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

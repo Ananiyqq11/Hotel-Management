@@ -37,6 +37,7 @@
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
             this.errorProviderforuserinput = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderforuserinput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(134, 34);
+            this.label1.Location = new System.Drawing.Point(132, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 30);
             this.label1.TabIndex = 0;
@@ -53,7 +54,7 @@
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(151, 95);
+            this.txt_username.Location = new System.Drawing.Point(151, 86);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(194, 20);
             this.txt_username.TabIndex = 1;
@@ -63,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(46, 97);
+            this.label2.Location = new System.Drawing.Point(51, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 18);
             this.label2.TabIndex = 2;
@@ -74,7 +75,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(46, 150);
+            this.label3.Location = new System.Drawing.Point(51, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 18);
             this.label3.TabIndex = 3;
@@ -82,17 +83,17 @@
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(151, 150);
+            this.txt_password.Location = new System.Drawing.Point(151, 121);
             this.txt_password.Name = "txt_password";
-            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(194, 20);
             this.txt_password.TabIndex = 4;
+            this.txt_password.UseSystemPasswordChar = true;
             // 
             // btn_Login
             // 
             this.btn_Login.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Login.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Login.Location = new System.Drawing.Point(107, 200);
+            this.btn_Login.Location = new System.Drawing.Point(92, 200);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 29);
             this.btn_Login.TabIndex = 5;
@@ -104,7 +105,7 @@
             // 
             this.btn_Exit.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btn_Exit.Location = new System.Drawing.Point(255, 200);
+            this.btn_Exit.Location = new System.Drawing.Point(220, 200);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(75, 29);
             this.btn_Exit.TabIndex = 6;
@@ -117,11 +118,25 @@
             this.errorProviderforuserinput.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderforuserinput.ContainerControl = this;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkBox1.Location = new System.Drawing.Point(165, 157);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(108, 19);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Show Password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 241);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txt_password);
@@ -149,6 +164,7 @@
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.ErrorProvider errorProviderforuserinput;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

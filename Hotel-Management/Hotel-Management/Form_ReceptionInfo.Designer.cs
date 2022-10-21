@@ -79,6 +79,7 @@
             this.label_Search.Size = new System.Drawing.Size(66, 26);
             this.label_Search.TabIndex = 46;
             this.label_Search.Text = "Search";
+            this.label_Search.Click += new System.EventHandler(this.label_Search_Click);
             // 
             // label_Delete
             // 

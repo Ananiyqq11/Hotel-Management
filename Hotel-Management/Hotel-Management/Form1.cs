@@ -66,5 +66,17 @@ namespace Hotel_Management
                 this.Hide();
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                txt_password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txt_password.UseSystemPasswordChar = true;  
+            }
+        }
     }
 }
