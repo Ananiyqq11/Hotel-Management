@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Hotel_Management
 {
@@ -155,13 +156,16 @@ namespace Hotel_Management
             {
                 SqlConnection con = new SqlConnection(constring);
                 con.Open();
-                SqlCommand Command = new SqlCommand("delete from Client where @ClientID=ClientID", con);
-                Command.Parameters.AddWithValue("@ClientID", txt_ClientID.Text);
+                if (MessageBox.Show("Are you sure you want to delete ClientID " + int.Parse(txt_ClientID.Text) + " ?", "Delete", MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
+                {
 
-                Command.ExecuteNonQuery();
-                MessageBox.Show("Client Deleted Successfully!!!");
-                con.Close();
-                populate();
+                    SqlCommand Command = new SqlCommand("exec dbo.[delete Client]'" + int.Parse(txt_ClientID.Text) + "'", con);
+
+                    Command.ExecuteNonQuery();
+                    MessageBox.Show("Client Deleted Successfully!!!");
+                    con.Close();
+                    populate();
+                }
             }
         }
 
@@ -173,6 +177,40 @@ namespace Hotel_Management
         private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
             demo();
+        }
+
+        private void label_Edit_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("[update Client]'" + int.Parse(txt_ClientID.Text)+"','"+txt_ClientName.Text.ToString()+"','"+ txt_ClientPhoneNumber.Text.ToString() + "','"+comboBox1.Text.ToString() + "'", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Client Updated Successfully");
+            populate();
+        }
+
+        private void label_Search_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("exec dbo.[search Client]'" + int.Parse(txt_ClientID.Text) + "'", con);
+            SqlDataAdapter adpter = new SqlDataAdapter(cmd);
+            DataTable datble = new DataTable();
+            adpter.Fill(datble);
+            dataGridView1.DataSource = datble;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                txt_ClientID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+               txt_ClientName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+               txt_ClientPhoneNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+               comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            }
         }
     }
 }

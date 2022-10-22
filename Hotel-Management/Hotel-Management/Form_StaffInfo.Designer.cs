@@ -60,6 +60,7 @@
             this.label_Search.Size = new System.Drawing.Size(66, 26);
             this.label_Search.TabIndex = 29;
             this.label_Search.Text = "Search";
+            this.label_Search.Click += new System.EventHandler(this.label_Search_Click);
             // 
             // label_Delete
             // 
@@ -81,6 +82,7 @@
             this.label_Edit.Size = new System.Drawing.Size(46, 26);
             this.label_Edit.TabIndex = 27;
             this.label_Edit.Text = "Edit";
+            this.label_Edit.Click += new System.EventHandler(this.label_Edit_Click);
             // 
             // label_Add
             // 
@@ -101,6 +103,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(569, 219);
             this.dataGridView1.TabIndex = 25;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label_BackToLogin
             // 
