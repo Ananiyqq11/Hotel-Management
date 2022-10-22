@@ -68,23 +68,58 @@ namespace Hotel_Management
         {
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            SqlCommand Command = new SqlCommand("delete from Reception where @ReceptID=ReceptID", con);
-            Command.Parameters.AddWithValue("@ReceptID", txt_ReceptionID.Text);
+            if (MessageBox.Show("Are you sure you want to delete ReceptionID " + int.Parse(txt_ReceptionID.Text) + " ?", "Delete", MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
+            {
 
-            Command.ExecuteNonQuery();
-            MessageBox.Show("Reception Deleted Successfully!!!");
-            con.Close();
-            populate();
-        }
+                SqlCommand Command = new SqlCommand("delete from Reception where @ReceptID=ReceptID", con);
+                Command.Parameters.AddWithValue("@ReceptID", txt_ReceptionID.Text);
 
-        private void label_Exit_Click(object sender, EventArgs e)
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Reception Deleted Successfully!!!");
+                con.Close();
+                populate();
+            }
+    }
+
+    private void label_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void label_Search_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("exec dbo.[search Client]'" + int.Parse(txt_ReceptionID.Text) + "'", con);
+            SqlDataAdapter adpter = new SqlDataAdapter(cmd);
+            DataTable datble = new DataTable();
+            adpter.Fill(datble);
+            dataGridView1.DataSource = datble;
+        }
 
+        private void label_Edit_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("[update Reception]'" + int.Parse(txt_ReceptionID.Text) + "','" + txt_ReceptionName.Text.ToString() + "','" + txt_ReceptionPhoneNumber.Text.ToString() + "','" + comboBox1.Text.ToString() +"',"+comboBox1.Text.ToString()+"'"+txt_ReceptionAddress.Text.ToString()+"','"+txt_ReceptionPassword.Text.ToString()+"'" + con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Client Updated Successfully");
+            populate();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+               txt_ReceptionID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_ReceptionName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txt_ReceptionPhoneNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txt_ReceptionAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txt_ReceptionPassword.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
         }
     }
 }

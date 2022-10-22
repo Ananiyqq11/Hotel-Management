@@ -64,13 +64,16 @@ namespace Hotel_Management
         {
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            SqlCommand Command = new SqlCommand("delete from Room where @RoomID=RoomID", con);
-            Command.Parameters.AddWithValue("@RoomID", txt_RoomNumber.Text);
+            if (MessageBox.Show("Are you sure you want to delete RoomID " + int.Parse(txt_RoomNumber.Text) + " ?", "Delete", MessageBoxButtons.YesNo).Equals(DialogResult.Yes))
+            {
+                SqlCommand Command = new SqlCommand("delete from Room where @RoomID=RoomID", con);
+                Command.Parameters.AddWithValue("@RoomID", txt_RoomNumber.Text);
 
-            Command.ExecuteNonQuery();
-            MessageBox.Show("Room Deleted Successfully!!!");
-            con.Close();
-            populate();
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Room Deleted Successfully!!!");
+                con.Close();
+                populate();
+            }
         }
 
         private void label_Exit_Click(object sender, EventArgs e)
@@ -78,5 +81,59 @@ namespace Hotel_Management
             Application.Exit();
         }
 
+        private void label_Edit_Click(object sender, EventArgs e)
+        {
+          string roomavail = " ";
+            SqlConnection con = new SqlConnection(constring);
+            if (radioButton_Yes.Checked == true)
+            {
+                roomavail = "Free";
+            }
+            else
+            {
+                roomavail = "Rented";
+            }
+            con.Open();
+            SqlCommand cmd = new SqlCommand("[update Room]'" + int.Parse(txt_RoomNumber.Text) + "','" + txt_RoomPhoneNumber.Text.ToString() + "','" + roomavail + "'", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Client Updated Successfully");
+            populate();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                txt_RoomNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_RoomPhoneNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                if (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString()=="Rented") {
+                    radioButton_No.Checked = true;
+                    radioButton_Yes.Checked = false;
+                }
+                else
+                {
+                    radioButton_No.Checked = false;
+                    radioButton_Yes.Checked = true;
+                }
+                //if (radioButton_Yes==true)
+                //{
+                  //  radioButton_Yes.Checked == true
+                //} ? "Free" : "Rented"
+                //Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+        }
+
+        private void label_Search_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("exec dbo.[search Room]'" + int.Parse(txt_RoomNumber.Text) + "'", con);
+            SqlDataAdapter adpter = new SqlDataAdapter(cmd);
+            DataTable datble = new DataTable();
+            adpter.Fill(datble);
+            dataGridView1.DataSource = datble;
+        }
     }
 }

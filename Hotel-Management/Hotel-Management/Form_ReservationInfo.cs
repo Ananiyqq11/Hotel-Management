@@ -102,5 +102,45 @@ namespace Hotel_Management
             con.Close();
             populate();
         }
+
+        private void label_Edit_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            //  SqlCommand cmd = new SqlCommand("[update Client]'" + comboBox1.Text.ToString() + "','" + comboBox2.Text.ToString() + "','" +dateTimePicker1.Text.ToString() + "','" +dateTimePicker2.Text.ToString()+ "'", con);
+            SqlCommand cmd = new SqlCommand("update Reservation set (@ClientName,@RoomID,@DateIn,@DateOut)");
+            cmd.Parameters.AddWithValue("@ClientName", comboBox1.Text.ToString());
+            cmd.Parameters.AddWithValue("@RoomID", comboBox2.Text.ToString());
+            cmd.Parameters.AddWithValue("@DateIn", dateTimePicker1.Text.ToString());
+            cmd.Parameters.AddWithValue("@DateOut", dateTimePicker2.Text.ToString());
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Client Updated Successfully");
+            populate();
+        }
+
+        private void label_Search_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("exec dbo.[search Reservation]'" + int.Parse(comboBox2.Text) + "'", con);
+            SqlDataAdapter adpter = new SqlDataAdapter(cmd);
+            DataTable datble = new DataTable();
+            adpter.Fill(datble);
+            dataGridView1.DataSource = datble;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dataGridView1.CurrentRow.Selected = true;
+                comboBox1.Text= dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                comboBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                dateTimePicker2.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+               
+            }
+        }
     }
 }
